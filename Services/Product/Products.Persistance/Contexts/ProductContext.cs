@@ -13,6 +13,7 @@ public class ProductContext : DbContext
         Configuration = configuration;
     }
     public DbSet<Product> Products { get; set; }
+    public DbSet<ProductCardType> ProductCardTypes { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

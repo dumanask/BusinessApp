@@ -15,3 +15,4 @@ C:\Users\HP\Desktop\DEV\BusinessApp\Services\Product\Core\Products.Application\o
 C:\Users\HP\Desktop\DEV\BusinessApp\Services\Product\Core\Products.Application\obj\Debug\net8.0\refint\Products.Application.dll
 C:\Users\HP\Desktop\DEV\BusinessApp\Services\Product\Core\Products.Application\obj\Debug\net8.0\Products.Application.pdb
 C:\Users\HP\Desktop\DEV\BusinessApp\Services\Product\Core\Products.Application\obj\Debug\net8.0\ref\Products.Application.dll
+C:\Users\HP\Desktop\DEV\BusinessApp\Services\Product\Core\Products.Application\obj\Debug\net8.0\Products.Application.sourcelink.json

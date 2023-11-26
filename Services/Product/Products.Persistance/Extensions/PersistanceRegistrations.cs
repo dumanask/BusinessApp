@@ -12,6 +12,7 @@ public static class PersistanceRegistrations
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<IProductCardTypeRepository, ProductCardTypeRepository>();
 
 
         services.AddDbContext<ProductContext>(options =>

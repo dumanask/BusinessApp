@@ -37,20 +37,29 @@ namespace Products.Persistance.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float?>("Price")
-                        .HasColumnType("real");
+                    b.Property<Guid>("ProductCardTypeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductCatalogId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("ProductGroupId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductModelTypeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<float?>("Stock")
-                        .HasColumnType("real");
+                    b.Property<Guid>("ProductStatusId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("UnitType")
                         .HasColumnType("int");

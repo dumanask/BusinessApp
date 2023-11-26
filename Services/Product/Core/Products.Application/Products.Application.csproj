@@ -7,6 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Features\ProductCardTypes\Commands\CreateList\" />
+    <Folder Include="Features\ProductCardTypes\Commands\DeleteList\" />
+    <Folder Include="Features\ProductCardTypes\Commands\Delete\" />
+    <Folder Include="Features\ProductCardTypes\Commands\UpdateList\" />
+    <Folder Include="Features\ProductCardTypes\Commands\Update\" />
+    <Folder Include="Features\ProductCardTypes\Queries\" />
+    <Folder Include="Features\ProductCatalogs\Commands\" />
+    <Folder Include="Features\ProductCatalogs\Profiles\" />
+    <Folder Include="Features\ProductCatalogs\Queries\" />
+    <Folder Include="Features\ProductGroups\Commands\" />
+    <Folder Include="Features\ProductGroups\Profiles\" />
+    <Folder Include="Features\ProductGroups\Queries\" />
+    <Folder Include="Features\ProductModelTypes\Commands\" />
+    <Folder Include="Features\ProductModelTypes\Profiles\" />
+    <Folder Include="Features\ProductModelTypes\Queries\" />
+    <Folder Include="Features\ProductStatuses\Commands\" />
+    <Folder Include="Features\ProductStatuses\Profiles\" />
+    <Folder Include="Features\ProductStatuses\Queries\" />
     <Folder Include="Services\Repositories\Commons\" />
   </ItemGroup>
 
