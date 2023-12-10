@@ -1,5 +1,6 @@
 using Products.Application.Extensions;
 using Products.Persistance.Extensions;
+using Shared.Exceptions.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+if (app.Environment.IsProduction())
+    app.ConfigureCustomExceptionMiddleware();
 
 app.UseHttpsRedirection();
 

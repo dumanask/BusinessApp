@@ -1,5 +1,6 @@
 using AutoMapper;
 using MediatR;
+using Products.Application.Features.Products.Rules;
 using Products.Application.Services.Repositories;
 using Products.Domain;
 
@@ -16,15 +17,20 @@ public class CreateProductCommand : IRequest<CreateProductResponse>
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
+        private readonly ProductBusinessRules _productBusinessRules;
+        
 
-        public CreateProductCommandHandler(IProductRepository productRepository, IMapper mapper)
+        public CreateProductCommandHandler(IProductRepository productRepository, IMapper mapper, ProductBusinessRules productBusinessRules)
         {
             _productRepository = productRepository;
             _mapper = mapper;
+            _productBusinessRules = productBusinessRules;
         }
 
         public async Task<CreateProductResponse> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
+            await  _productBusinessRules.ProductCodeCannotBeDuplicatedWhenInserted(request.ProductCode);
+            
             var product = _mapper.Map<Product>(request);
             product.Id = Guid.NewGuid();
 

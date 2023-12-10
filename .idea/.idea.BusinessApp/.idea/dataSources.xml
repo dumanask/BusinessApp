@@ -9,5 +9,13 @@
       <jdbc-url>Server = (localdb)\MSSQLLocalDB;Initial Catalog= BusinesApp; Integrated Security=True</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="Microsoft SQL Server (JetBrains) [2]" uuid="31cc76a4-27fe-4371-b407-b580ad3ddbcd">
+      <driver-ref>sqlserver.jb</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
+      <jdbc-url>Server = (localdb)\MSSQLLocalDB;Initial Catalog= BusinesApp; Integrated Security=True</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

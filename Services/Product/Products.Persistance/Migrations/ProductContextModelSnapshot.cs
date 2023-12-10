@@ -45,7 +45,7 @@ namespace Products.Persistance.Migrations
 
                     b.Property<string>("ProductCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<Guid>("ProductGroupId")
                         .HasColumnType("uniqueidentifier");
@@ -69,7 +69,41 @@ namespace Products.Persistance.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex(new[] { "ProductCode" }, "UK_Product_ProductCode")
+                        .IsUnique();
+
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Products.Domain.ProductCardType", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ProductCardTypeCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductCardTypeDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductCardTypeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductCardTypes");
                 });
 #pragma warning restore 612, 618
         }

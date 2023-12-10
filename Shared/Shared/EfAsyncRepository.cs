@@ -36,6 +36,17 @@ public class EfAsyncRepository<TEntity, TId, TContext> : IAsyncRepository<TEntit
         return entities;
     }
 
+    public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
+    {
+        var data = _context.Set<TEntity>().AsQueryable();
+        if (include != null)
+            data = include(data);
+
+        var result = await data.Where(predicate).FirstOrDefaultAsync();
+
+        return result;
+    }
+
     public async Task<TEntity> GetById(Expression<Func<TEntity, bool>> predicate, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
     {
         var data = _context.Set<TEntity>().AsQueryable();
