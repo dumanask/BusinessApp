@@ -12,7 +12,7 @@ public class ProductConfigurations: BaseEntityConfiguration<Product, Guid>
         builder.Property(x => x.ProductName).IsRequired().HasMaxLength(100);
         //builder.Property(x => x.Price).IsRequired();
 
-        //builder.HasIndex(indexExpression: x => x.ProductCode, name: "UK_Product_ProductCode").IsUnique();
+        builder.HasIndex(indexExpression: x => x.ProductCode, name: "UK_Product_ProductCode").IsUnique();
 
 
     }

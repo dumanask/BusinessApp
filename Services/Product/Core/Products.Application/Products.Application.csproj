@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\ProductCardTypes\Commands\CreateList\" />
-    <Folder Include="Features\ProductCardTypes\Commands\DeleteList\" />
-    <Folder Include="Features\ProductCardTypes\Commands\Delete\" />
-    <Folder Include="Features\ProductCardTypes\Commands\UpdateList\" />
-    <Folder Include="Features\ProductCardTypes\Commands\Update\" />
     <Folder Include="Features\ProductCardTypes\Queries\" />
     <Folder Include="Features\ProductCatalogs\Commands\" />
     <Folder Include="Features\ProductCatalogs\Profiles\" />
