@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BusinessApp.Shared.Application.Services;
+using BusinessApp.Shared.Domain.Models.Commons;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -7,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared;
+namespace BusinessApp.Shared.Persistance.Repositories;
 
 public class EfAsyncRepository<TEntity, TId, TContext> : IAsyncRepository<TEntity, TId>
     where TEntity : BaseEntity<TId>

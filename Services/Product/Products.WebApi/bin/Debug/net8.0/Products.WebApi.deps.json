@@ -75,6 +75,14 @@
           }
         }
       },
+      "Bogus/35.4.0": {
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "assemblyVersion": "35.4.0.0",
+            "fileVersion": "35.4.0.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -942,13 +950,21 @@
           }
         }
       },
+      "BusinessApp.Shared/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0"
+        },
+        "runtime": {
+          "BusinessApp.Shared.dll": {}
+        }
+      },
       "Products.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BusinessApp.Shared": "1.0.0",
           "MediatR": "12.2.0",
-          "Products.Domain": "1.0.0",
-          "Shared": "1.0.0"
+          "Products.Domain": "1.0.0"
         },
         "runtime": {
           "Products.Application.dll": {}
@@ -956,7 +972,7 @@
       },
       "Products.Domain/1.0.0": {
         "dependencies": {
-          "Shared": "1.0.0"
+          "BusinessApp.Shared": "1.0.0"
         },
         "runtime": {
           "Products.Domain.dll": {}
@@ -964,23 +980,16 @@
       },
       "Products.Persistance/1.0.0": {
         "dependencies": {
+          "Bogus": "35.4.0",
+          "BusinessApp.Shared": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Products.Application": "1.0.0",
-          "Products.Domain": "1.0.0",
-          "Shared": "1.0.0"
+          "Products.Domain": "1.0.0"
         },
         "runtime": {
           "Products.Persistance.dll": {}
-        }
-      },
-      "Shared/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.0"
-        },
-        "runtime": {
-          "Shared.dll": {}
         }
       }
     }
@@ -1018,6 +1027,13 @@
       "sha512": "sha512-eHEiCO/8+MfNc9nH5dVew/+FvxdaGrkRL4OMNwIz0W79+wtJyEoeRlXJ3SrXhoy9XR58geBYKmzMR83VO7bcAw==",
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
+    },
+    "Bogus/35.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XdUvztqAXJb3CI0+/fJrB4K7p8bOlnmhplibMCDpl4vHG/NRDjG9qionxYf9DKk7cbVfMTUfSkQ7hcxKBdO0Dg==",
+      "path": "bogus/35.4.0",
+      "hashPath": "bogus.35.4.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1586,6 +1602,11 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
+    "BusinessApp.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Products.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1597,11 +1618,6 @@
       "sha512": ""
     },
     "Products.Persistance/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

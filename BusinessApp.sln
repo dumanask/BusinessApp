@@ -11,19 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TechnicalService", "Technic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{D8E7CE34-5CFA-4D8D-BD8B-7B13C1FE5028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared\Shared.csproj", "{C2CA12BE-A170-4D67-A1A8-685935B173DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessApp.Shared", "Shared\Shared\BusinessApp.Shared.csproj", "{C2CA12BE-A170-4D67-A1A8-685935B173DA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C36868AE-0F1E-460E-84FB-D34BA1407C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Application", "Services\Product\Core\Products.Application\Products.Application.csproj", "{00FDCDDF-6E29-46B4-8568-28B66E3DC1CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Application", "Services\Product\Core\Products.Application\Products.Application.csproj", "{00FDCDDF-6E29-46B4-8568-28B66E3DC1CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Domain", "Services\Product\Core\Products.Domain\Products.Domain.csproj", "{EE93A68F-16CD-40AB-A3C2-C93C56D48D6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Domain", "Services\Product\Core\Products.Domain\Products.Domain.csproj", "{EE93A68F-16CD-40AB-A3C2-C93C56D48D6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Infrastructure", "Services\Product\Products.Infrastructure\Products.Infrastructure.csproj", "{4905D545-3D5E-4826-932F-2B3F2495B44B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Infrastructure", "Services\Product\Products.Infrastructure\Products.Infrastructure.csproj", "{4905D545-3D5E-4826-932F-2B3F2495B44B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Persistance", "Services\Product\Products.Persistance\Products.Persistance.csproj", "{3B6EA0C9-87B9-4C34-A277-0E257086FEEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Persistance", "Services\Product\Products.Persistance\Products.Persistance.csproj", "{3B6EA0C9-87B9-4C34-A277-0E257086FEEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.WebApi", "Services\Product\Products.WebApi\Products.WebApi.csproj", "{9EF8EDAA-151A-4F15-A209-4DB4C218BDCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.WebApi", "Services\Product\Products.WebApi\Products.WebApi.csproj", "{9EF8EDAA-151A-4F15-A209-4DB4C218BDCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

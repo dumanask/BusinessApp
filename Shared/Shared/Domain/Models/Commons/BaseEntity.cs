@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Shared;
+namespace BusinessApp.Shared.Domain.Models.Commons;
 
 public class BaseEntity<TId>
 {

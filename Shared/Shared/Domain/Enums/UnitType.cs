@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Enums;
+namespace BusinessApp.Shared.Domain.Enums;
 public enum UnitType
 {
     meter,

@@ -1,4 +1,6 @@
 using System.Reflection;
+using BusinessApp.Shared.Constants.Products;
+using BusinessApp.Shared.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Products.Domain;
@@ -18,4 +20,17 @@ public class ProductContext : DbContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            var connectionString = ProductsConstants.DefaultConnectionString;
+            optionsBuilder.UseSqlServer(connectionString, opt =>
+            {
+                opt.EnableRetryOnFailure();
+            });
+        }
+    }
+
 }

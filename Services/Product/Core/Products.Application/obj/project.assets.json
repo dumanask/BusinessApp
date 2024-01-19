@@ -267,30 +267,30 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Products.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Shared": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Products.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Products.Domain.dll": {}
-        }
-      },
-      "Shared/1.0.0": {
+      "BusinessApp.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.0"
         },
         "compile": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/BusinessApp.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/BusinessApp.Shared.dll": {}
+        }
+      },
+      "Products.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BusinessApp.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Products.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Products.Domain.dll": {}
         }
       }
     }
@@ -773,44 +773,44 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "BusinessApp.Shared/1.0.0": {
+      "type": "project",
+      "path": "../../../../Shared/Shared/BusinessApp.Shared.csproj",
+      "msbuildProject": "../../../../Shared/Shared/BusinessApp.Shared.csproj"
+    },
     "Products.Domain/1.0.0": {
       "type": "project",
       "path": "../Products.Domain/Products.Domain.csproj",
       "msbuildProject": "../Products.Domain/Products.Domain.csproj"
-    },
-    "Shared/1.0.0": {
-      "type": "project",
-      "path": "../../../../Shared/Shared/Shared.csproj",
-      "msbuildProject": "../../../../Shared/Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "BusinessApp.Shared >= 1.0.0",
       "MediatR >= 12.2.0",
-      "Products.Domain >= 1.0.0",
-      "Shared >= 1.0.0"
+      "Products.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Users\\E3TAM\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\DEV\\BusinessApp\\Services\\Product\\Core\\Products.Application\\Products.Application.csproj",
+      "projectUniqueName": "C:\\Users\\E3TAM\\source\\BusinessApp\\Services\\Product\\Core\\Products.Application\\Products.Application.csproj",
       "projectName": "Products.Application",
-      "projectPath": "C:\\Users\\HP\\Desktop\\DEV\\BusinessApp\\Services\\Product\\Core\\Products.Application\\Products.Application.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\DEV\\BusinessApp\\Services\\Product\\Core\\Products.Application\\obj\\",
+      "projectPath": "C:\\Users\\E3TAM\\source\\BusinessApp\\Services\\Product\\Core\\Products.Application\\Products.Application.csproj",
+      "packagesPath": "C:\\Users\\E3TAM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\E3TAM\\source\\BusinessApp\\Services\\Product\\Core\\Products.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\E3TAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -826,11 +826,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\HP\\Desktop\\DEV\\BusinessApp\\Services\\Product\\Core\\Products.Domain\\Products.Domain.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\DEV\\BusinessApp\\Services\\Product\\Core\\Products.Domain\\Products.Domain.csproj"
+            "C:\\Users\\E3TAM\\source\\BusinessApp\\Services\\Product\\Core\\Products.Domain\\Products.Domain.csproj": {
+              "projectPath": "C:\\Users\\E3TAM\\source\\BusinessApp\\Services\\Product\\Core\\Products.Domain\\Products.Domain.csproj"
             },
-            "C:\\Users\\HP\\Desktop\\DEV\\BusinessApp\\Shared\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\DEV\\BusinessApp\\Shared\\Shared\\Shared.csproj"
+            "C:\\Users\\E3TAM\\source\\BusinessApp\\Shared\\Shared\\BusinessApp.Shared.csproj": {
+              "projectPath": "C:\\Users\\E3TAM\\source\\BusinessApp\\Shared\\Shared\\BusinessApp.Shared.csproj"
             }
           }
         }
@@ -874,7 +874,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

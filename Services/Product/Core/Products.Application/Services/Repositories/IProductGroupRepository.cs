@@ -1,5 +1,5 @@
+using BusinessApp.Shared.Application.Services;
 using Products.Domain;
-using Shared;
 
 namespace Products.Application.Services.Repositories;
 

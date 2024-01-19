@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared;
+namespace BusinessApp.Shared.Application.Services;
 
 public interface IAsyncRepository<TEntity, TId>
 {
