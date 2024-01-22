@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessApp.Shared.Application.Services;
 
-public interface IAsyncRepository<TEntity, TId>
+public interface IAsyncRepository<TEntity>
 {
     Task<TEntity> AddAsync(TEntity entity);
 

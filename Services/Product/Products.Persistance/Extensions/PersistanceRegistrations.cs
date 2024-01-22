@@ -11,18 +11,28 @@ public static class PersistanceRegistrations
 {
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddScoped<IProductRepository, ProductRepository>();
-        services.AddScoped<IProductCardTypeRepository, ProductCardTypeRepository>();
+
 
 
         services.AddDbContext<ProductContext>(options =>
         {
-            options.UseSqlServer(configuration.GetConnectionString("BusinesApp"), opt =>
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"), opt =>
             {
 
                 opt.EnableRetryOnFailure();
             });
         });
+
+        services.AddScoped<IProductCardTypeRepository, ProductCardTypeRepository>();
+        services.AddScoped<IProductCatalogRepository, ProductCatalogRepository>();
+        services.AddScoped<IProductGroupRepository, ProductGroupRepository>();
+        services.AddScoped<IProductModelTypeRepository, ProductModelTypeRepository>();
+        services.AddScoped<IProductStatusRepository, ProductStatusRepository>();
+        services.AddScoped<IProductRepository, ProductRepository>();
+
+
+        var seedData = new SeedData();
+        seedData.SeedAsync(configuration).GetAwaiter().GetResult();
 
         return services;
     }

@@ -2,7 +2,7 @@ using BusinessApp.Shared.Domain.Models.Commons;
 
 namespace Products.Domain;
 
-public class ProductModelType : BaseEntity<Guid>
+public class ProductModelType : BaseEntity
 {
     public string ProductModelCode { get; set; }
     public string ProductModelName { get; set; }

@@ -5,7 +5,7 @@ using Products.Persistance.Contexts;
 
 namespace Products.Persistance.Services.Repositories;
 
-public class ProductStatusRepository : EfAsyncRepository<ProductStatus, Guid, ProductContext>, IProductStatusRepository
+public class ProductStatusRepository : EfAsyncRepository<ProductStatus, ProductContext>, IProductStatusRepository
 {
     public ProductStatusRepository(ProductContext context) : base(context)
     {

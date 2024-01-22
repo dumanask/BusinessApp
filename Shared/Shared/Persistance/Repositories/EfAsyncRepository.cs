@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace BusinessApp.Shared.Persistance.Repositories;
 
-public class EfAsyncRepository<TEntity, TId, TContext> : IAsyncRepository<TEntity, TId>
-    where TEntity : BaseEntity<TId>
+public class EfAsyncRepository<TEntity, TContext> : IAsyncRepository<TEntity>
+    where TEntity : BaseEntity
     where TContext : DbContext
 {
     protected TContext _context;
@@ -23,7 +23,7 @@ public class EfAsyncRepository<TEntity, TId, TContext> : IAsyncRepository<TEntit
 
     public async Task<TEntity> AddAsync(TEntity entity)
     {
-        entity.CreatedDate = DateTime.UtcNow;
+        //entity.CreatedDate = DateTime.UtcNow;
         await _context.AddAsync(entity);
         await _context.SaveChangesAsync();
         return entity;
@@ -31,8 +31,8 @@ public class EfAsyncRepository<TEntity, TId, TContext> : IAsyncRepository<TEntit
 
     public async Task<List<TEntity>> AddListAsync(List<TEntity> entities)
     {
-        foreach (TEntity entity in entities)
-            entity.CreatedDate = DateTime.UtcNow;
+        //foreach (TEntity entity in entities)
+        //    entity.CreatedDate = DateTime.UtcNow;
         await _context.AddRangeAsync(entities);
         await _context.SaveChangesAsync();
         return entities;

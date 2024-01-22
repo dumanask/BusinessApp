@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessApp.Shared.Persistance.Configurations;
 
-public class BaseEntityConfiguration<TEntity, TId> : IEntityTypeConfiguration<TEntity> where TEntity : BaseEntity<TId>
+public class BaseEntityConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : BaseEntity
 {
     public virtual void Configure(EntityTypeBuilder<TEntity> builder)
     {

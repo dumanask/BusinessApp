@@ -3,7 +3,7 @@ using Products.Domain;
 
 namespace Products.Application.Services.Repositories;
 
-public interface IProductGroupRepository : IAsyncRepository<ProductGroup, Guid>
+public interface IProductGroupRepository : IAsyncRepository<ProductGroup>
 {
     
 }

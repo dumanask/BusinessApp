@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessApp.Shared.Domain.Models.Users
 {
-    public class User : BaseEntity<Guid>
+    public class User : BaseEntity
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -4,7 +4,7 @@ using Products.Domain;
 
 namespace Products.Persistance.Configurations;
 
-public class ProductConfigurations : BaseEntityConfiguration<Product, Guid>
+public class ProductConfigurations : BaseEntityConfiguration<Product>
 {
     public override void Configure(EntityTypeBuilder<Product> builder)
     {
